@@ -270,6 +270,29 @@ claude-code-verify clean-commits HEAD
 
 ---
 
+## Postscript: This Article Almost Had Pattern #7 in It
+
+Hours before publication, a review pass caught something unsettling. The citation block above — the one you just read — contained three factual errors that I (the human author) had accepted without verification:
+
+- The arxiv 2603.20847 paper's actual title is *"Engineering Pitfalls in AI Coding Tools: An Empirical Study of Bugs in Claude Code, Codex, and Gemini CLI"* — not *"A Systematic Study of Bug Patterns in Claude Code"*, as an earlier draft claimed.
+- The paper analyzes **three tools**, not just Claude Code.
+- The API/integration figure is **36.9%**, not 37.3%.
+
+The draft was written with LLM assistance. When asked to summarize the citations, the model generated a plausible-sounding paraphrase based on partial memory of the paper — never fetching the actual abstract. The output read confidently. It felt correct. It had the structure and register of accurate citation. It simply wasn't.
+
+This is Pattern #7, *Phantom API Assumption*, applied to academic citations instead of code. The model filled in what a citation to that paper would likely say, rather than what the paper actually says.
+
+Two observations:
+
+1. **The pattern generalizes beyond code.** Anywhere an LLM summarizes or references an external document from partial context, phantom detail can enter the output undetected.
+2. **Human review remains essential.** The error was caught because the human author asked, *"Wait — there are no hyperlinks on these citations?"* Clicking through the URLs exposed the mismatch. Without that one question, the article would have shipped with fabricated attribution.
+
+If you use any of the tools in this article to check your own specs, I'd invite you to also run a `check-spec`-like pass over the non-code artifacts in your project: citations, external documentation references, benchmark numbers, anything a model might have generated from approximate memory. The underlying defect is the same.
+
+This section was added after the rest of the article was published. See commit history for the correction trail: `f07ce63` (factual corrections), `36d1ee5` (added hyperlinks that enabled the catch).
+
+---
+
 ## Links
 
 - **Part 1**: [README.md](./README.md) — the original 6 patterns and 5 golden rules.
