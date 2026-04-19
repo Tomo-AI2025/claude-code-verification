@@ -24,8 +24,8 @@ Since Part 1 was published, additional peer-reviewed and industry sources have c
 
 ### What the Existing Literature Says
 
-- [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) (FSE '26) analyzed 3,800 real-world issues in Claude Code. **67% were functionality bugs**, and 37.3% stemmed from API or integration mismatches — the same category Part 1 called Silent Failure.
-- [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) documented silent semantic errors across agentic LLM frameworks broadly. Our Pattern #7 is a specific, measurable instance of this phenomenon.
+- [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) analyzed 3,800 real-world issues across **Claude Code, Codex, and Gemini CLI**. **67% were functionality bugs**, and **36.9%** stemmed from API or integration mismatches — the same category Part 1 called Silent Failure.
+- [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) examined 409 bugs across 5 agentic frameworks (including CrewAI and AutoGen), identifying symptoms like unexpected execution sequences and ignored user configurations. Our Pattern #7 is a specific, measurable instance of this phenomenon.
 - [GitHub Issue #19739 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19739) is an ongoing community thread cataloging systematic failure patterns. Several entries overlap with the new patterns documented here.
 - **BSWEN (March 2026)** described "phantom API hallucination" as a daily source of developer frustration, without quantifying frequency. We close that gap.
 - [GitHub Issue #19117 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19117) documents terminology ambiguity inside Anthropic's own telemetry configuration — evidence that Pattern #9 is structural, not a local quirk.
@@ -257,8 +257,8 @@ claude-code-verify clean-commits HEAD
 
 ## Related Work
 
-1. [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) — *A Systematic Study of Bug Patterns in Claude Code* (FSE '26). 3,800 issues analyzed; 67% functionality bugs.
-2. [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) — Silent semantic errors across agentic LLM frameworks.
+1. [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) — *Engineering Pitfalls in AI Coding Tools: An Empirical Study of Bugs in Claude Code, Codex, and Gemini CLI*. 3,800 issues analyzed across 3 tools; 67% functionality bugs, 36.9% API/integration.
+2. [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) — *Dissecting Bug Triggers and Failure Modes in Modern Agentic Frameworks: An Empirical Study*. 409 bugs across 5 frameworks (CrewAI, AutoGen, …).
 3. [GitHub Issue #19739 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19739) — Community thread cataloging systematic failure patterns.
 4. **BSWEN (March 2026)** — Phantom API hallucination described qualitatively.
 5. [GitHub Issue #19117 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19117) — Telemetry terminology ambiguity in Anthropic's own documentation.
