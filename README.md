@@ -4,6 +4,11 @@
 
 This repository documents **16 empirical verification rounds** on a real production codebase (automated stock trading system), revealing **6 systematic failure patterns** and **5 golden rules** for achieving 100% implementation fidelity with Claude Code.
 
+## 📖 Continue Reading
+
+- **[Part 2: 4 More Patterns + 5 Auto-Fix Commands](README-part2.md)** — Our follow-up with 16 more verification rounds, 4 new failure patterns, and a CLI toolkit (`claude-code-verify`) that raises implementation rate from 60% to 94%.
+- Japanese version: [README-ja.md](README-ja.md)
+
 ## Why This Matters
 
 Every developer using Claude Code, Cursor, Copilot, or any LLM-based coding agent faces the same invisible problem: **the code looks complete, but critical wiring is missing.**
