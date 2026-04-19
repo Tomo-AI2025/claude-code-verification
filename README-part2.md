@@ -24,11 +24,11 @@ Since Part 1 was published, additional peer-reviewed and industry sources have c
 
 ### What the Existing Literature Says
 
-- **arxiv 2603.20847 (FSE '26)** analyzed 3,800 real-world issues in Claude Code. **67% were functionality bugs**, and 37.3% stemmed from API or integration mismatches — the same category Part 1 called Silent Failure.
-- **arxiv 2604.08906** documented silent semantic errors across agentic LLM frameworks broadly. Our Pattern #7 is a specific, measurable instance of this phenomenon.
-- **GitHub Issue #19739 (anthropics/claude-code)** is an ongoing community thread cataloging systematic failure patterns. Several entries overlap with the new patterns documented here.
+- [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) (FSE '26) analyzed 3,800 real-world issues in Claude Code. **67% were functionality bugs**, and 37.3% stemmed from API or integration mismatches — the same category Part 1 called Silent Failure.
+- [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) documented silent semantic errors across agentic LLM frameworks broadly. Our Pattern #7 is a specific, measurable instance of this phenomenon.
+- [GitHub Issue #19739 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19739) is an ongoing community thread cataloging systematic failure patterns. Several entries overlap with the new patterns documented here.
 - **BSWEN (March 2026)** described "phantom API hallucination" as a daily source of developer frustration, without quantifying frequency. We close that gap.
-- **GitHub Issue #19117 (anthropics/claude-code)** documents terminology ambiguity inside Anthropic's own telemetry configuration — evidence that Pattern #9 is structural, not a local quirk.
+- [GitHub Issue #19117 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19117) documents terminology ambiguity inside Anthropic's own telemetry configuration — evidence that Pattern #9 is structural, not a local quirk.
 
 The gap these sources share is actionable remediation. They characterize the problem; they do not ship a tool that fixes a specification before Claude Code consumes it. That is the gap Part 2 fills.
 
@@ -257,15 +257,15 @@ claude-code-verify clean-commits HEAD
 
 ## Related Work
 
-1. **arxiv 2603.20847** — *A Systematic Study of Bug Patterns in Claude Code* (FSE '26). 3,800 issues analyzed; 67% functionality bugs.
-2. **arxiv 2604.08906** — Silent semantic errors across agentic LLM frameworks.
-3. **GitHub Issue #19739 (anthropics/claude-code)** — Community thread cataloging systematic failure patterns.
+1. [arxiv 2603.20847](https://arxiv.org/abs/2603.20847) — *A Systematic Study of Bug Patterns in Claude Code* (FSE '26). 3,800 issues analyzed; 67% functionality bugs.
+2. [arxiv 2604.08906](https://arxiv.org/abs/2604.08906) — Silent semantic errors across agentic LLM frameworks.
+3. [GitHub Issue #19739 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19739) — Community thread cataloging systematic failure patterns.
 4. **BSWEN (March 2026)** — Phantom API hallucination described qualitatively.
-5. **GitHub Issue #19117 (anthropics/claude-code)** — Telemetry terminology ambiguity in Anthropic's own documentation.
-6. **cclint** (carlrannaberg) — Claude Code configuration linter.
-7. **opslane/verify** — Browser-based UI test runner.
-8. **claude-code-quality-hook** (dhofheinz) — Pre-commit lint fixer for Claude Code repositories.
-9. **spec-kit** (GitHub) — Specification-authoring workflow.
+5. [GitHub Issue #19117 (anthropics/claude-code)](https://github.com/anthropics/claude-code/issues/19117) — Telemetry terminology ambiguity in Anthropic's own documentation.
+6. [cclint](https://github.com/carlrannaberg/cclint) (carlrannaberg) — Claude Code configuration linter.
+7. [opslane/verify](https://github.com/opslane/verify) — Browser-based UI test runner.
+8. [claude-code-quality-hook](https://github.com/dhofheinz/claude-code-quality-hook) (dhofheinz) — Pre-commit lint fixer for Claude Code repositories.
+9. [spec-kit](https://github.com/github/spec-kit) (GitHub) — Specification-authoring workflow.
 10. **GateGuard** (PyPI) — Investigation-gate enforcement tool.
 
 ---
