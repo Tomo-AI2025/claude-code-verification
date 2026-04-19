@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.patch
+*.wiring.patch
+*.scope.patch
+.commit-suggestions.md
+
+# Claude
+.claude/settings.local.json
